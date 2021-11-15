@@ -24,15 +24,22 @@ const seedDb=async()=>{
         const random1000=Math.floor(Math.random()*1000);
         const price=Math.floor(Math.random()*20)+10;
         const camp=new Campground({
+            //MY AUTHOR ID
             author:'618bf25af49bfbc9d7f84a2e',
             location:`${cities[random1000].city},${cities[random1000].state}`,
             title:`${sample(descriptors)} ${sample(places)}`,
             description:'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos deserunt voluptates perferendis perspiciatis ipsa quas beatae expedita odit ut labore, assumenda adipisci repellendus dolor autem tenetur ex corrupti ea maiores!',
             price,
+            geometry: {
+                type:"Point",
+                coordinates:[-113.1331,47.0202]
+            },
             images:[
                 {
-                  url: 'https://res.cloudinary.com/dou8gckhw/image/upload/v1636832325/YelpCamp/xxyadp0jqydwemsr9lbd.jpg',
-                  filename: 'YelpCamp/xxyadp0jqydwemsr9lbd'
+                //   url: 'https://res.cloudinary.com/dou8gckhw/image/upload/v1636832325/YelpCamp/xxyadp0jqydwemsr9lbd.jpg',
+                //   filename: 'YelpCamp/xxyadp0jqydwemsr9lbd'
+                  url:'https://res.cloudinary.com/dou8gckhw/image/upload/v1636963246/YelpCamp/ispg7gc0ec3q776r5kwk.jpg',
+                  filename:'YelpCamp/ispg7gc0ec3q776r5kwk'
                 }
               ]
         });
